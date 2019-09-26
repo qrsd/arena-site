@@ -1,0 +1,35 @@
+name: ArenaSite
+description: An app built using Flutter for web
+
+environment:
+  # You must be using Flutter >=1.5.0 or Dart >=2.3.0
+  sdk: '>=2.3.0 <3.0.0'
+flutter:
+  assets:
+    - secret.json
+
+dependencies:
+  flutter_web: any
+  flutter_web_ui: any
+  bloc: ^0.15.0
+  equatable: ^0.3.0
+  flutter_bloc:
+    git:
+      url: https://github.com/felangel/bloc
+      path: packages/flutter_bloc
+      ref: flutter_web
+
+dev_dependencies:
+  build_runner: ^1.5.0
+  build_web_compilers: ^2.1.0
+  pedantic: ^1.7.0
+
+dependency_overrides:
+  flutter_web:
+    git:
+      url: https://github.com/flutter/flutter_web
+      path: packages/flutter_web
+  flutter_web_ui:
+    git:
+      url: https://github.com/flutter/flutter_web
+      path: packages/flutter_web_ui
